@@ -1,0 +1,24 @@
+<div class="form-froup row">
+
+  <label class="col-sm-4 col-form-label"> Department Name </label>
+  <div class="col-sm-7">
+    <input type="text" class="form-control" [(ngModel)]="DepartmentName" placeholder="Enter Department Name">
+  </div>
+  <label class="col-sm-4 col-form-label"> City Name </label>
+  <div class="col-sm-7">
+    <input type="text" class="form-control" [(ngModel)]="CityName" placeholder="Enter City Name">
+  </div>
+  <label class="col-sm-4 col-form-label"> Postal Code </label>
+  <div class="col-sm-7">
+    <input type="text" class="form-control" [(ngModel)]="PostalCode" placeholder="Enter Postal Code">
+  </div>
+
+</div>
+
+<button (click)="addDepartment()" *ngIf="dep.DepartmentId==0" class="btn btn-primary">
+  ADD
+</button>
+
+<button (click)="updateDepartment()" *ngIf="dep.DepartmentId!==0" class="btn btn-primary">
+  UPDATE
+</button>
